@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#000',
+    backgroundColor: '#000000', // Deep black
   },
   video: {
     width: '100%',
@@ -55,7 +55,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   placeholderText: {
-    color: '#FFF',
+    color: '#FFD700', // Gold text
+    fontSize: 18,
+    fontWeight: '600',
+    textShadowColor: 'rgba(255, 215, 0, 0.5)', // Gold glow effect
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 10,
   },
 });
 

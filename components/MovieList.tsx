@@ -61,7 +61,7 @@ const MovieList = () => {
   if (isLoading) {
     return (
       <View style={[styles.container, styles.centered]}>
-        <ActivityIndicator size="large" color="#FFF" />
+        <ActivityIndicator size="large" color="#FFD700" />
       </View>
     );
   }
@@ -91,22 +91,28 @@ const MovieList = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#121212',
+    backgroundColor: '#000000', // Deep black
   },
   header: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#FFF',
-    backgroundColor: '#222',
+    color: '#FFD700', // Gold text
+    backgroundColor: '#0A0A0A', // Slightly lighter black
     padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#FFD700', // Gold border
+    textShadowColor: 'rgba(255, 215, 0, 0.3)',
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 5,
   },
   centered: {
     justifyContent: 'center',
     alignItems: 'center',
   },
   emptyText: {
-    color: '#888',
+    color: '#FFD700', // Gold text
     textAlign: 'center',
+    fontWeight: '500',
   },
   item: {
     flexDirection: 'row',
@@ -117,19 +123,22 @@ const styles = StyleSheet.create({
     width: 50,
     height: 75,
     marginRight: 15,
-    backgroundColor: '#333',
+    backgroundColor: '#1A1A1A',
     borderRadius: 4,
+    borderWidth: 1,
+    borderColor: '#333',
   },
   info: {
     flex: 1,
   },
   name: {
-    color: '#FFF',
+    color: '#FFD700', // Gold text
     fontSize: 16,
+    fontWeight: '500',
   },
   separator: {
     height: 1,
-    backgroundColor: '#333',
+    backgroundColor: '#1A1A1A',
     marginLeft: 75,
   },
 });
