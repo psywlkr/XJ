@@ -140,9 +140,8 @@ const PlaylistManager = () => {
           dropdownIconColor="#FFF"
           enabled={!editingProfile}
         >
-          {/* --- CORRECTION DU STYLE (blanc sur blanc) --- */}
-          <Picker.Item label="Playlist M3U" value="m3u" color={Platform.OS === 'android' ? '#000' : '#FFF'} />
-          <Picker.Item label="Xtream Codes" value="xtream" color={Platform.OS === 'android' ? '#000' : '#FFF'} />
+          <Picker.Item label="Playlist M3U" value="m3u" color={Platform.OS === 'android' ? '#000' : '#FFD700'} />
+          <Picker.Item label="Xtream Codes" value="xtream" color={Platform.OS === 'android' ? '#000' : '#FFD700'} />
           <Picker.Item label="Stalker (MAC)" value="stalker" color={Platform.OS === 'android' ? '#888' : '#888'} enabled={false} />
         </Picker>
       </View>
@@ -184,7 +183,7 @@ const PlaylistManager = () => {
             
       {isLoading && !currentProfile && (
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#007AFF" />
+          <ActivityIndicator size="large" color="#FFD700" />
           <Text style={styles.loadingText}>Chargement en cours...</Text>
         </View>
       )}
@@ -204,41 +203,45 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    backgroundColor: '#121212',
+    backgroundColor: '#000000', // Deep black
   },
   title: {
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
-    color: '#FFF',
+    color: '#FFD700', // Gold text
+    textShadowColor: 'rgba(255, 215, 0, 0.3)',
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 5,
   },
   label: {
-    color: '#AAA',
+    color: '#B8860B', // Darker gold for labels
     fontSize: 12,
     marginBottom: 4,
     marginLeft: 2,
+    fontWeight: '500',
   },
   input: {
     height: 44,
-    borderColor: '#444',
+    borderColor: '#FFD700', // Gold border
     borderWidth: 1,
     borderRadius: 8,
     marginBottom: 12,
     paddingHorizontal: 10,
-    backgroundColor: '#222',
-    color: '#FFF',
+    backgroundColor: '#0A0A0A', // Slightly lighter black
+    color: '#FFD700', // Gold text
   },
   pickerContainer: {
-    borderColor: '#444',
+    borderColor: '#FFD700', // Gold border
     borderWidth: 1,
     borderRadius: 8,
     marginBottom: 12,
-    backgroundColor: '#222',
+    backgroundColor: '#0A0A0A', // Slightly lighter black
   },
   picker: {
     height: 44,
     width: '100%',
-    color: '#FFF', // Couleur du texte SÉLECTIONNÉ
+    color: '#FFD700', // Gold text
   },
   formButtons: {
     flexDirection: 'row',
@@ -246,53 +249,62 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   divider: {
-    height: 1,
-    backgroundColor: '#444',
+    height: 2,
+    backgroundColor: '#FFD700', // Gold divider
     marginVertical: 20,
+    shadowColor: '#FFD700',
+    shadowOpacity: 0.5,
+    shadowRadius: 8,
   },
   profileItem: {
-    backgroundColor: '#2A2A2A',
+    backgroundColor: '#0A0A0A', // Slightly lighter black
     padding: 10,
     borderRadius: 8,
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#333',
   },
   profileInfo: {
     flex: 1,
     marginRight: 5,
   },
   profileName: {
-    color: '#FFF',
+    color: '#FFD700', // Gold text
     fontSize: 16,
-    flexShrink: 1, 
+    flexShrink: 1,
+    fontWeight: '600',
   },
   profileType: {
-    color: '#AAA',
+    color: '#B8860B', // Darker gold
     fontSize: 12,
   },
   profileActions: {
     flexDirection: 'row',
   },
   actionButton: {
-    paddingHorizontal: 10, 
+    paddingHorizontal: 10,
     paddingVertical: 8,
     borderRadius: 5,
-    marginLeft: 5, 
+    marginLeft: 5,
     justifyContent: 'center',
   },
   loadButton: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#FFD700', // Gold button
+    shadowColor: '#FFD700',
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
   },
   editButton: {
-    backgroundColor: '#FF9500', // Orange
+    backgroundColor: '#B8860B', // Darker gold for edit
   },
   deleteButton: {
-    backgroundColor: '#FF3B30',
+    backgroundColor: '#8B4513', // Dark brownish-gold for delete
   },
   actionButtonText: {
-    color: '#FFF',
+    color: '#000', // Black text on gold buttons
     fontWeight: 'bold',
     fontSize: 12,
   },
@@ -301,8 +313,9 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   loadingText: {
-    color: '#007AFF',
+    color: '#FFD700', // Gold text
     marginTop: 10,
+    fontWeight: '500',
   },
   errorText: {
     color: '#FF3B30',
@@ -310,9 +323,10 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   emptyText: {
-    color: '#888',
+    color: '#B8860B', // Darker gold
     textAlign: 'center',
     marginTop: 20,
+    fontWeight: '500',
   },
 });
 

@@ -41,11 +41,11 @@ const SeasonScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#121212' },
+  container: { flex: 1, backgroundColor: '#000000' }, // Deep black
   item: { padding: 15 },
-  name: { color: '#FFF', fontSize: 16 },
-  count: { color: '#AAA', fontSize: 12, marginTop: 4 },
-  separator: { height: 1, backgroundColor: '#333' },
+  name: { color: '#FFD700', fontSize: 16, fontWeight: '500' }, // Gold text
+  count: { color: '#B8860B', fontSize: 12, marginTop: 4 }, // Darker gold
+  separator: { height: 1, backgroundColor: '#1A1A1A' },
 });
 
 export default SeasonScreen;

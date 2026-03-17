@@ -64,7 +64,7 @@ const SeriesList = () => {
   if (isLoading) {
     return (
       <View style={[styles.container, styles.centered]}>
-        <ActivityIndicator size="large" color="#FFF" />
+        <ActivityIndicator size="large" color="#FFD700" />
       </View>
     );
   }
@@ -91,16 +91,35 @@ const SeriesList = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#121212' },
-  header: { fontSize: 16, fontWeight: 'bold', color: '#FFF', backgroundColor: '#222', padding: 10 },
+  container: { flex: 1, backgroundColor: '#000000' }, // Deep black
+  header: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#FFD700', // Gold text
+    backgroundColor: '#0A0A0A', // Slightly lighter black
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#FFD700', // Gold border
+    textShadowColor: 'rgba(255, 215, 0, 0.3)',
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 5,
+  },
   centered: { justifyContent: 'center', alignItems: 'center', flex: 1 },
-  emptyText: { color: '#888', textAlign: 'center' },
+  emptyText: { color: '#FFD700', textAlign: 'center', fontWeight: '500' }, // Gold text
   item: { flexDirection: 'row', padding: 10, alignItems: 'center' },
-  logo: { width: 50, height: 75, marginRight: 15, backgroundColor: '#333', borderRadius: 4 },
+  logo: {
+    width: 50,
+    height: 75,
+    marginRight: 15,
+    backgroundColor: '#1A1A1A',
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor: '#333',
+  },
   info: { flex: 1 },
-  name: { color: '#FFF', fontSize: 16 },
-  count: { color: '#AAA', fontSize: 12, marginTop: 4 },
-  separator: { height: 1, backgroundColor: '#333', marginLeft: 75 },
+  name: { color: '#FFD700', fontSize: 16, fontWeight: '500' }, // Gold text
+  count: { color: '#B8860B', fontSize: 12, marginTop: 4 }, // Darker gold for secondary text
+  separator: { height: 1, backgroundColor: '#1A1A1A', marginLeft: 75 },
 });
 
 export default SeriesList;

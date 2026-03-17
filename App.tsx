@@ -30,11 +30,12 @@ const App = () => {
         <NavigationContainer>
           <Stack.Navigator
             // --- L'ÉCRAN DE DÉMARRAGE EST DE RETOUR SUR "Home" ---
-            initialRouteName="Home" 
+            initialRouteName="Home"
             screenOptions={{
-              headerStyle: { backgroundColor: '#1A1A1A' },
-              headerTintColor: '#FFF',
+              headerStyle: { backgroundColor: '#000000', borderBottomWidth: 2, borderBottomColor: '#FFD700' }, // Deep black with gold border
+              headerTintColor: '#FFD700', // Gold text
               headerBackTitleVisible: false,
+              headerShadowVisible: true,
             }}
           >
             {/* On a supprimé l'écran "Splash" */}
